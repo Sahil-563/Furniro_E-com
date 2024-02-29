@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { BiHide, BiSolidShow } from "react-icons/bi";
 import { useState } from "react";
 import SignUpImg from "../assets/SignUpImg.jpg";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -47,7 +48,9 @@ function SignUp() {
           <div className="lg:pr-11 px-8">
             <p className="pt-10 text-end font-light ">
               have an account?{" "}
-              <span className="text-emerald-400 font-semibold ">Sign In!</span>
+              <span className="text-emerald-400 font-semibold ">
+                <Link to="/SignIn">Sign In!</Link>
+              </span>
             </p>
             <div className="flex pt-16 flex-col items-center align-middle">
               <p className="font-semibold text-2xl">Get Started With Makers</p>

@@ -3,8 +3,15 @@ import { FaFacebook } from "react-icons/fa";
 import { BiHide, BiSolidShow } from "react-icons/bi";
 import { useState } from "react";
 import SignUpImg from "../assets/SignUpImg.jpg";
+import { Link } from "react-router-dom";
 
 function SignIn() {
+  const [rememberMe, setRememberMe] = useState(false);
+  console.log(rememberMe, "remeberMe");
+
+  const handleToggle = () => {
+    setRememberMe(!rememberMe);
+  };
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -31,7 +38,9 @@ function SignIn() {
           <div className="lg:pr-11 px-8">
             <p className="pt-10 text-end font-light ">
               Don’t have an account?{" "}
-              <span className="text-emerald-400 font-semibold ">Sign Up!</span>
+              <span className="text-emerald-400 font-semibold ">
+                <Link to="/SignUp">Sign Up!</Link>
+              </span>
             </p>
             <div className="flex pt-28 flex-col items-center align-middle">
               <p className="font-semibold text-4xl">Welcome Back</p>
@@ -97,11 +106,34 @@ function SignIn() {
                   </button>
                 </div>
 
-                <div className="flex justify-between mb-8 ">
-                  <div className="flex">
-                    <p>Remeber me</p>
+                <div className="flex items-center justify-between mb-8">
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="rememberMeToggle"
+                      checked={rememberMe}
+                      onChange={handleToggle}
+                      className="sr-only"
+                    />
+                    <label
+                      htmlFor="rememberMeToggle"
+                      className="flex items-center cursor-pointer"
+                    >
+                      <div className="w-12 h-6 bg-[#ECECEC] rounded-full shadow-inner ring-2 ring-gray-200 relative">
+                        <div
+                          className={`${
+                            rememberMe
+                              ? "translate-x-6 bg-white"
+                              : "translate-x-0 bg-white"
+                          } absolute left-0 top-0 w-6 h-6 rounded-full shadow-md transition-transform duration-300 ease-in-out`}
+                        ></div>
+                      </div>
+                      <span className="ml-2">Remember me</span>
+                    </label>
                   </div>
-                  <p className="text-[#D93F21]">Recover Password</p>
+                  <div>
+                    <p className="text-[#D93F21]"> Recover Password</p>
+                  </div>
                 </div>
 
                 <button

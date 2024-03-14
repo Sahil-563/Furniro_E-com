@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 function Home() {
-  const isLogin: boolean = false;
+  const isLogin: boolean = true;
 
   const navigate = useNavigate();
 

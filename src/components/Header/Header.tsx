@@ -17,7 +17,7 @@ function Header() {
         </div>
 
         <ul
-          className={`flex w-screen items-center text-lg bg-slate-200 font-medium z-10 flex-col justify-center h-screen absolute top-0 lg:flex-row lg:relative lg:z-0 lg:h-fit lg:bg-inherit ${
+          className={`lg:pl-[80px] flex w-screen items-center text-lg bg-slate-200 font-medium z-10 flex-col justify-center h-screen absolute top-0 lg:flex-row lg:relative lg:z-0 lg:h-fit lg:bg-inherit ${
             click ? "left-0" : "-left-full lg:left-0"
           }`}
         >

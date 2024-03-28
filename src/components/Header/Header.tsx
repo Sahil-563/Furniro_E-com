@@ -10,7 +10,7 @@ function Header() {
   };
   return (
     <>
-      <div className="w-full h-[120px] flex items-center justify-between relative">
+      <div className="w-full h-[110px] flex items-center justify-between relative">
         <div className="flex items-center md:pl-[50px] pl-[10px] hover:cursor-pointer">
           <img className="w-[90px] h-[100px]" src={logo} alt="logo" />
           <p className="sm:block text-4xl font-bold pr-5 hidden">Furniro</p>
